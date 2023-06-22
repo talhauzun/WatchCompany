@@ -1,0 +1,47 @@
+<%-include header %>
+
+<body>
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="brand" href="/">WatchCompany</a>
+			<div class="nav-collapse">
+				<ul class="nav">
+					<li class="active"><a href="/">Front Page</a></li>
+					<% if(user){ %>
+					<li><a href="/logout">Sign out</a></li>
+					<li><a href="/device">Equipment Control</a></li>
+					<li><a href="/ems">Energy Management</a></li>
+					<% } else { %> 
+					<li><a href="/login">Log in</a></li>
+					<li><a href="/reg">Register</a></li>
+					<% } %>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="container" class="container">
+<div class="hero-unit">
+<h1>Welcome to WatchCompany</h1>
+<br>
+<p><abbr title="WatchCompanyEnergyManagementSystem">WatchCompany</abbr>Energy Management</p>
+<p>
+<a class="btn btn-primary btn-large" href="/login">Log in</a>
+<a class="btn btn-large" href="/reg">Register</a>
+</p>
+</div>
+<hr />
+
+
+<%-include footer %>
+
+
+

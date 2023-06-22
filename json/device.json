@@ -1,0 +1,16 @@
+[
+    {
+        "deviceid": 0,
+        "devicename": "device1",
+        "devicestatus": "1",
+        "devicepower": "5555",
+        "devicetime":"updatetime"
+    },
+    {
+        "deviceid": 1,
+        "devicename": "电视device1",
+        "devicestatus": "112",
+        "devicepower": "6666",
+        "devicetime":"updatetime1"
+    }
+]

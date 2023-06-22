@@ -1,0 +1,69 @@
+<%-include header %>
+
+
+<body>
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="brand" href="/">WatchCompany</a>
+			<div class="nav-collapse">
+				<ul class="nav">
+					<li><a href="/">Front page</a></li>
+					<% if(user){ %>
+					<li><a href="/logout">Sign out</a></li>
+					<li class="active"><a href="/device">Equipment Control</a></li>
+					<li><a href="/ems">Energy Management</a></li>
+					<% } else { %> 
+					<li><a href="/login">Log in</a></li>
+					<li><a href="/reg">Register</a></li>
+					<% } %>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+<div  class="container">
+	<h1>
+	Device List
+	</h1>
+
+<div id="toolbar" class="btn-group">
+    <button type="button" class="btn btn-default">
+        <i class="icon icon-plus"></i> Add Device
+    </button>
+    <button type="button" class="btn btn-default" id="remove">
+        <i class="icon icon-trash"></i> Delete Device
+    </button>
+</div>
+
+
+	<table	id="table" 
+			data-toolbar="#toolbar"
+			data-search="true"
+			data-show-columns="true"
+       		data-show-refresh="true"
+       		data-show-toggle="true"
+			data-click-to-select="true">
+	</table>
+ 
+</div> 
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+<h3><%= powerrate %>Electricity</h3>
+<h3><%= time %>Time</h3>
+
+<hr/>
+<%-include footer %>
+
+
